@@ -1,0 +1,51 @@
+[gd_scene load_steps=2 format=3 uid="uid://bv7qyted7du6i"]
+
+[ext_resource type="Script" uid="uid://bk5afsftiacxv" path="res://scenes/winner.gd" id="1_xirn5"]
+
+[node name="Winner" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xirn5")
+
+[node name="BG" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="WinnerLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -187.0
+offset_top = 305.0
+offset_right = 187.0
+offset_bottom = 455.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 84
+text = "Winner"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MainMenu" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -126.0
+offset_top = -340.0
+offset_right = 126.0
+offset_bottom = -273.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 50
+text = "Main Menu"

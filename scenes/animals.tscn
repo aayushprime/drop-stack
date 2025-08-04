@@ -1,0 +1,80 @@
+[gd_scene load_steps=4 format=3 uid="uid://dctuvhr1fj7n5"]
+
+[ext_resource type="Texture2D" uid="uid://cma5tp34i8n41" path="res://assets/animals/dolphin.png" id="2_bc1kg"]
+[ext_resource type="Texture2D" uid="uid://dbgfa641yegi0" path="res://assets/animals/giraffe.png" id="3_3f28n"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_3f28n"]
+rough = true
+bounce = 0.05
+
+[node name="Animals" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+mouse_filter = 2
+
+[node name="Dolphin" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_left = 1.0
+offset_right = 1.0
+mouse_filter = 2
+
+[node name="Body" type="RigidBody2D" parent="Dolphin" groups=["animal"]]
+mass = 0.2
+physics_material_override = SubResource("PhysicsMaterial_3f28n")
+
+[node name="Sprite2D" type="TextureRect" parent="Dolphin/Body"]
+custom_minimum_size = Vector2(200, 200)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -77.4
+offset_right = 100.0
+offset_bottom = 122.6
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_bc1kg")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Dolphin/Body"]
+position = Vector2(-1, 0)
+polygon = PackedVector2Array(-72, 9, -64, -8, -39, -25, -3, -34, 28, -51, 43, -51, 35, -35, 37, -26, 70, 2, 79, 31, 82, 70, 80, 82, 90, 100, 89, 109, 74, 98, 69, 90, 49, 97, 61, 79, 69, 71, 51, 36, 13, 24, 18, 39, -6, 35, -14, 26, -10, 42, -24, 38, -30, 27, -63, 30, -85, 34, -89, 24)
+
+[node name="Giraffe" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1.0
+offset_right = 1.0
+mouse_filter = 2
+
+[node name="Body" type="RigidBody2D" parent="Giraffe" groups=["animal"]]
+position = Vector2(-4, -2)
+mass = 0.2
+physics_material_override = SubResource("PhysicsMaterial_3f28n")
+
+[node name="Sprite2D" type="TextureRect" parent="Giraffe/Body"]
+custom_minimum_size = Vector2(200, 400)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -102.0
+offset_top = -237.0
+offset_right = 98.0
+offset_bottom = 163.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("3_3f28n")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Giraffe/Body"]
+position = Vector2(-51, 30)
+polygon = PackedVector2Array(2, -1, 2, -2, 15, -9, 34, -25, 31, -58, 30, -108, 34, -124, 23, -138, 49, -135, 59, -142, 52, -157, 58, -160, 66, -143, 72, -143, 70, -160, 80, -159, 80, -142, 98, -124, 102, -104, 112, -90, 99, -77, 64, -76, 64, -35, 72, 5, 67, 29, 64, 64, 73, 86, 61, 88, 54, 46, 57, 90, 50, 93, 44, 91, 41, 50, 36, 31, 30, 30, 25, 52, 32, 81, 21, 83, 14, 45, 16, 89, 2, 88, 2, 42, 5, 36, 1, 9, -11, 41, -19, 43, -17, 32, -7, 20)

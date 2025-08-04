@@ -1,0 +1,214 @@
+[gd_scene load_steps=5 format=3 uid="uid://dnk6p04jsocgs"]
+
+[ext_resource type="Script" uid="uid://cktq7sjbusllr" path="res://scenes/root.gd" id="1_0wfyh"]
+[ext_resource type="Script" uid="uid://bc8oxfxkeh1l0" path="res://scenes/input_catcher.gd" id="2_0wfyh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ig7tw"]
+size = Vector2(500, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0wfyh"]
+size = Vector2(2400, 472)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_0wfyh")
+
+[node name="Game" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="BG" type="Panel" parent="Game"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TurnLabel" type="Label" parent="Game"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -142.0
+offset_top = -579.0
+offset_right = 142.0
+offset_bottom = -518.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme_override_font_sizes/font_size = 48
+text = "Player 1 Turn"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Tip" type="Label" parent="Game"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -150.5
+offset_top = 127.0
+offset_right = 150.5
+offset_bottom = 188.0
+grow_horizontal = 2
+mouse_filter = 1
+theme_override_font_sizes/font_size = 24
+text = "Tap to rotate"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DropFrom" type="Control" parent="Game"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 2.0
+offset_top = -393.0
+offset_right = 2.0
+offset_bottom = -393.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="Platform" type="ColorRect" parent="Game"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = 340.0
+offset_right = 250.0
+offset_bottom = 370.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(250, 15)
+mouse_filter = 1
+color = Color(1, 0.933333, 0.8, 1)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Game/Platform"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Game/Platform/StaticBody2D"]
+position = Vector2(250, 15)
+shape = SubResource("RectangleShape2D_ig7tw")
+
+[node name="DiscardArea" type="Control" parent="Game"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 1
+
+[node name="DropArea" type="Area2D" parent="Game/DiscardArea"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Game/DiscardArea/DropArea"]
+position = Vector2(0, 164)
+shape = SubResource("RectangleShape2D_0wfyh")
+
+[node name="InputCatcher" type="Control" parent="Game"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("2_0wfyh")
+
+[node name="DropButton" type="Button" parent="Game"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -58.0
+offset_top = -226.0
+offset_right = 58.0
+offset_bottom = -159.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 50
+text = "Drop"
+
+[node name="Menu" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Title" type="Label" parent="Menu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -184.5
+offset_top = -151.5
+offset_right = 184.5
+offset_bottom = 151.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 120
+text = "Animal
+Drop"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Play" type="Button" parent="Menu"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -125.0
+offset_top = -340.0
+offset_right = 125.0
+offset_bottom = -273.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 50
+text = "     Play     "
+
+[node name="Quit" type="Button" parent="Menu"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -125.0
+offset_top = -257.0
+offset_right = 125.0
+offset_bottom = -190.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 50
+text = "     Quit     "
