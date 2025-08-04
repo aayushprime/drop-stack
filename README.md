@@ -5,5 +5,8 @@ The first player causing the tower to tip loses.
 
 
 # Credits
-Theme: https://intergenic.itch.io/godot-theme-soft-retro
-Art: Recraft.ai
+Theme: https://intergenic.itch.io/godot-theme-soft-retro  
+Animals Art: Recraft.ai
+
+# Demo
+[Play](https://aayushprime.itch.io/animal-drop)
