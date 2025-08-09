@@ -1,0 +1,550 @@
+[gd_scene load_steps=15 format=3 uid="uid://b04wfg3f3sm5p"]
+
+[ext_resource type="Script" uid="uid://drvev4622pjii" path="res://scenes/main_menu.gd" id="1_l6cm7"]
+[ext_resource type="Texture2D" uid="uid://cyuel2402vj7x" path="res://assets/geometric/2.png" id="2_rcqid"]
+[ext_resource type="Texture2D" uid="uid://d687rwvk0yfk" path="res://assets/geometric/3.png" id="3_1ajci"]
+[ext_resource type="Texture2D" uid="uid://cp5y1l0txyh1d" path="res://assets/geometric/4.png" id="4_7b55j"]
+[ext_resource type="Texture2D" uid="uid://bqjp216sd8tex" path="res://assets/geometric/5.png" id="5_5pajh"]
+[ext_resource type="Texture2D" uid="uid://b1j2ae203sggt" path="res://assets/geometric/6.png" id="6_j7ex8"]
+[ext_resource type="Texture2D" uid="uid://csrm4kyv5vekp" path="res://assets/geometric/7.png" id="7_a8gd2"]
+[ext_resource type="Texture2D" uid="uid://jbq7qlhcfswd" path="res://assets/geometric/8.png" id="8_hstxw"]
+[ext_resource type="Texture2D" uid="uid://6bvjibg61wjn" path="res://assets/geometric/9.png" id="9_8egab"]
+[ext_resource type="Texture2D" uid="uid://dcyknkejyhmu6" path="res://assets/geometric/10.png" id="10_gw5y6"]
+[ext_resource type="Texture2D" uid="uid://dqj5t32tpeukp" path="res://assets/geometric/11.png" id="11_svtp6"]
+[ext_resource type="Texture2D" uid="uid://d2tpjf3vvv2om" path="res://assets/geometric/12.png" id="12_1dfpl"]
+[ext_resource type="Texture2D" uid="uid://didm7lk87xivu" path="res://assets/geometric/13.png" id="13_qywvv"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_3wgol"]
+rough = true
+bounce = 0.05
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_l6cm7")
+
+[node name="Menu" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Title" type="Label" parent="Menu"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -184.0
+offset_top = 261.0
+offset_right = 185.0
+offset_bottom = 564.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 120
+text = "Drop
+Stack"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Levels" type="Button" parent="Menu"]
+custom_minimum_size = Vector2(400, 130)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -674.0
+offset_right = 200.0
+offset_bottom = -544.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 50
+text = "Levels
+"
+
+[node name="PlayAnimals" type="Button" parent="Menu"]
+custom_minimum_size = Vector2(400, 130)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -513.0
+offset_right = 200.0
+offset_bottom = -383.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 50
+text = "Play Animals"
+
+[node name="PlayGeometric" type="Button" parent="Menu"]
+custom_minimum_size = Vector2(400, 130)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -347.0
+offset_right = 200.0
+offset_bottom = -217.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 50
+text = "Play Geometric"
+
+[node name="Quit" type="Button" parent="Menu"]
+custom_minimum_size = Vector2(400, 130)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -183.0
+offset_right = 200.0
+offset_bottom = -53.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 50
+text = "Quit
+"
+
+[node name="Control" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BrokenRhombus" type="Control" parent="Control"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1.0
+offset_right = 1.0
+scale = Vector2(0.8, 0.8)
+mouse_filter = 2
+
+[node name="Body" type="RigidBody2D" parent="Control/BrokenRhombus" groups=["shape"]]
+mass = 0.2
+physics_material_override = SubResource("PhysicsMaterial_3wgol")
+
+[node name="Sprite2D" type="TextureRect" parent="Control/BrokenRhombus/Body"]
+custom_minimum_size = Vector2(200, 200)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -77.4
+offset_right = 100.0
+offset_bottom = 122.6
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_rcqid")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Control/BrokenRhombus/Body"]
+position = Vector2(-1, 0)
+polygon = PackedVector2Array(-87, -28, -96, 73, -48.1911, 73, -1, 53, 39, 72, 92, 73, 97, -26, 43, -4)
+
+[node name="OddShape" type="Control" parent="Control"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1.0
+offset_right = 1.0
+scale = Vector2(0.8, 0.8)
+mouse_filter = 2
+
+[node name="Body" type="RigidBody2D" parent="Control/OddShape" groups=["shape"]]
+mass = 0.2
+physics_material_override = SubResource("PhysicsMaterial_3wgol")
+
+[node name="Sprite2D" type="TextureRect" parent="Control/OddShape/Body"]
+custom_minimum_size = Vector2(200, 200)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -77.4
+offset_right = 100.0
+offset_bottom = 122.6
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("3_1ajci")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Control/OddShape/Body"]
+position = Vector2(-1, 0)
+polygon = PackedVector2Array(-81, -74, -75, 52, -96, 104, -89, 118, 75, 119, 82, 105, 12, 26, 97, -58, 91, -72)
+
+[node name="OddShape2" type="Control" parent="Control"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1.0
+offset_right = 1.0
+scale = Vector2(0.8, 0.8)
+mouse_filter = 2
+
+[node name="Body" type="RigidBody2D" parent="Control/OddShape2" groups=["shape"]]
+mass = 0.2
+physics_material_override = SubResource("PhysicsMaterial_3wgol")
+
+[node name="Sprite2D" type="TextureRect" parent="Control/OddShape2/Body"]
+custom_minimum_size = Vector2(200, 200)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -77.4
+offset_right = 100.0
+offset_bottom = 122.6
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("4_7b55j")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Control/OddShape2/Body"]
+position = Vector2(-1, 0)
+polygon = PackedVector2Array(-72, -67, -84, -57, -93, 25, -42, 120, 7, 119, 29, 44, 91, -7, 89, -21, 45, -74)
+
+[node name="OddShape3" type="Control" parent="Control"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1.0
+offset_right = 1.0
+scale = Vector2(0.8, 0.8)
+mouse_filter = 2
+
+[node name="Body" type="RigidBody2D" parent="Control/OddShape3" groups=["shape"]]
+mass = 0.2
+physics_material_override = SubResource("PhysicsMaterial_3wgol")
+
+[node name="Sprite2D" type="TextureRect" parent="Control/OddShape3/Body"]
+custom_minimum_size = Vector2(200, 200)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -77.4
+offset_right = 100.0
+offset_bottom = 122.6
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("5_5pajh")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Control/OddShape3/Body"]
+position = Vector2(-1, 0)
+polygon = PackedVector2Array(-4, -60, -93, 93, -87, 105, 92, 104, 97, 95, 5, -59)
+
+[node name="OddShape4" type="Control" parent="Control"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1.0
+offset_right = 1.0
+scale = Vector2(0.8, 0.8)
+mouse_filter = 2
+
+[node name="Body" type="RigidBody2D" parent="Control/OddShape4" groups=["shape"]]
+mass = 0.2
+physics_material_override = SubResource("PhysicsMaterial_3wgol")
+
+[node name="Sprite2D" type="TextureRect" parent="Control/OddShape4/Body"]
+custom_minimum_size = Vector2(200, 200)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -77.4
+offset_right = 100.0
+offset_bottom = 122.6
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("6_j7ex8")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Control/OddShape4/Body"]
+position = Vector2(-1, 0)
+polygon = PackedVector2Array(-2, -67, -89, -5, -94, 8, -60, 110, -49, 115, 49, 114, 61, 112, 95, 8, 93, -1, 5, -67)
+
+[node name="OddShape5" type="Control" parent="Control"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1.0
+offset_right = 1.0
+scale = Vector2(0.8, 0.8)
+mouse_filter = 2
+
+[node name="Body" type="RigidBody2D" parent="Control/OddShape5" groups=["shape"]]
+mass = 0.2
+physics_material_override = SubResource("PhysicsMaterial_3wgol")
+
+[node name="Sprite2D" type="TextureRect" parent="Control/OddShape5/Body"]
+custom_minimum_size = Vector2(200, 200)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -77.4
+offset_right = 100.0
+offset_bottom = 122.6
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("7_a8gd2")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Control/OddShape5/Body"]
+position = Vector2(-1, 0)
+polygon = PackedVector2Array(-4, -70, -83, 63, -78, 74, -2, 118, 8, 116, 84, 73, 87, 66, 86, -21, 83, -28, 4, -72)
+
+[node name="OddShape6" type="Control" parent="Control"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1.0
+offset_right = 1.0
+scale = Vector2(0.8, 0.8)
+mouse_filter = 2
+
+[node name="Body" type="RigidBody2D" parent="Control/OddShape6" groups=["shape"]]
+mass = 0.2
+physics_material_override = SubResource("PhysicsMaterial_3wgol")
+
+[node name="Sprite2D" type="TextureRect" parent="Control/OddShape6/Body"]
+custom_minimum_size = Vector2(200, 200)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -77.4
+offset_right = 100.0
+offset_bottom = 122.6
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("8_hstxw")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Control/OddShape6/Body"]
+position = Vector2(-1, 0)
+polygon = PackedVector2Array(-4, -70, -68, -44, -64, -3, -96, 24, -67, 92, -4, 120, 6, 115, 15, 88, 62, 95, 71, 89, 96, 28, 94, 20, 62.8105, 4.59591, 61, 0, 69, -40, 65, -46, 4, -72)
+
+[node name="OddShape7" type="Control" parent="Control"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1.0
+offset_right = 1.0
+scale = Vector2(0.8, 0.8)
+mouse_filter = 2
+
+[node name="Body" type="RigidBody2D" parent="Control/OddShape7" groups=["shape"]]
+mass = 0.2
+physics_material_override = SubResource("PhysicsMaterial_3wgol")
+
+[node name="Sprite2D" type="TextureRect" parent="Control/OddShape7/Body"]
+custom_minimum_size = Vector2(200, 200)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -77.4
+offset_right = 100.0
+offset_bottom = 122.6
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("9_8egab")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Control/OddShape7/Body"]
+position = Vector2(-1, 0)
+polygon = PackedVector2Array(1, -61, 31, 34, 98, 102, 1, 81, -99, 105, -28, 31)
+
+[node name="OddShape8" type="Control" parent="Control"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1.0
+offset_right = 1.0
+scale = Vector2(0.8, 0.8)
+mouse_filter = 2
+
+[node name="Body" type="RigidBody2D" parent="Control/OddShape8" groups=["shape"]]
+mass = 0.2
+physics_material_override = SubResource("PhysicsMaterial_3wgol")
+
+[node name="Sprite2D" type="TextureRect" parent="Control/OddShape8/Body"]
+custom_minimum_size = Vector2(200, 200)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -77.4
+offset_right = 100.0
+offset_bottom = 122.6
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("10_gw5y6")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Control/OddShape8/Body"]
+position = Vector2(-1, 0)
+polygon = PackedVector2Array(-1, -75, -9, -74, -34, -16, -92, 11, -98, 21, -94, 31, -34, 57, -9, 114, -2, 117, 8, 116, 36, 57, 92, 31, 96, 20, 91, 12, 37, -13, 7, -75)
+
+[node name="OddShape9" type="Control" parent="Control"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1.0
+offset_right = 1.0
+scale = Vector2(0.8, 0.8)
+mouse_filter = 2
+
+[node name="Body" type="RigidBody2D" parent="Control/OddShape9" groups=["shape"]]
+mass = 0.2
+physics_material_override = SubResource("PhysicsMaterial_3wgol")
+
+[node name="Sprite2D" type="TextureRect" parent="Control/OddShape9/Body"]
+custom_minimum_size = Vector2(200, 200)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -77.4
+offset_right = 100.0
+offset_bottom = 122.6
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("11_svtp6")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Control/OddShape9/Body"]
+position = Vector2(-1, 0)
+polygon = PackedVector2Array(98, 1, 86, -8, 40, -20, 12, -63, 0, -71, -9, -63, -36, -23, -86, -9, -96, -1, -91, 10, -61, 51, -62, 109, -47, 115, -1, 96, 55, 115, 64, 103, 64, 50, 91, 16)
+
+[node name="OddShape10" type="Control" parent="Control"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1.0
+offset_right = 1.0
+scale = Vector2(0.8, 0.8)
+mouse_filter = 2
+
+[node name="Body" type="RigidBody2D" parent="Control/OddShape10" groups=["shape"]]
+mass = 0.2
+physics_material_override = SubResource("PhysicsMaterial_3wgol")
+
+[node name="Sprite2D" type="TextureRect" parent="Control/OddShape10/Body"]
+custom_minimum_size = Vector2(200, 200)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -77.4
+offset_right = 100.0
+offset_bottom = 122.6
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("12_1dfpl")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Control/OddShape10/Body"]
+position = Vector2(-1, 0)
+polygon = PackedVector2Array(46, 87, 1, 74, -44, 90, -56, 56, -92, 48, -97, 40, -72, 17, -81, -15, -30, -16, -1, -41, 32, -16, 81, -15, 73, 14, 99, 42, 56, 58)
+
+[node name="OddShape11" type="Control" parent="Control"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1.0
+offset_right = 1.0
+scale = Vector2(0.8, 0.8)
+mouse_filter = 2
+
+[node name="Body" type="RigidBody2D" parent="Control/OddShape11" groups=["shape"]]
+mass = 0.2
+physics_material_override = SubResource("PhysicsMaterial_3wgol")
+
+[node name="Sprite2D" type="TextureRect" parent="Control/OddShape11/Body"]
+custom_minimum_size = Vector2(200, 200)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -77.4
+offset_right = 100.0
+offset_bottom = 122.6
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("13_qywvv")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Control/OddShape11/Body"]
+position = Vector2(-1, 0)
+polygon = PackedVector2Array(99, 24, 1, -41, -94, 21, -97, 29, -28, 84, -20, 81, 6, 18, 41, 35, 41, 54, 51, 61, 97, 33)

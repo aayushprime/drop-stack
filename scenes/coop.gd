@@ -1,10 +1,11 @@
 extends Control
 class_name Root
 
-var animal_templates = preload("res://scenes/animals.tscn")
+var shapes_template: PackedScene = null
+
 var winner_scene = preload("res://scenes/winner.tscn")
 
-var animals = {}
+var shapes = {}
 
 @onready var turn_label = $Game/TurnLabel
 @onready var drop_from = $Game/DropFrom
@@ -12,7 +13,7 @@ var animals = {}
 @onready var discard_area = $Game/DiscardArea/DropArea
 
 var turn: int = 1
-var current_animal: Control = null
+var current_shape: RigidBody2D = null
 var game_over: bool = false
 
 var is_dragging: bool = false
@@ -20,76 +21,67 @@ var drag_start_position: Vector2 = Vector2.ZERO
 const DRAG_THRESHOLD = 10.0
 
 func _on_input_catcher_tapped():
-    if not current_animal or game_over: return
-    var body: RigidBody2D = current_animal.get_node("Body")
-    if body.freeze:
-        current_animal.rotation_degrees += 15
+    if not current_shape or game_over: return
+    if current_shape.freeze:
+        current_shape.rotation_degrees += 15
 
 # This function runs when the InputCatcher tells us a drag happened.
 func _on_input_catcher_dragged(event: InputEventMouseMotion):
-    if not current_animal or game_over: return
-    var body: RigidBody2D = current_animal.get_node("Body")
-    if body.freeze:
+    if not current_shape or game_over: return
+    if current_shape.freeze:
         var new_x = clamp(event.global_position.x, 100, 620)
-        current_animal.global_position.x = new_x
+        current_shape.global_position.x = new_x
 
 
 func _ready() -> void:
-  $Menu/Play.pressed.connect(func():
-    $Menu.visible = false
-    start_new_turn()
-  )
-  $Menu/Quit.pressed.connect(func():
-    get_tree().quit()
-  )
   $Game/InputCatcher.tapped.connect(_on_input_catcher_tapped)
   $Game/InputCatcher.dragged.connect(_on_input_catcher_dragged)
 
-  var scene_instance = animal_templates.instantiate()
+
+  var scene_instance = shapes_template.instantiate()
   for child in scene_instance.get_children():
-    animals[child.name] = child
+    shapes[child.name] = child
 
   discard_area.body_entered.connect(_on_discard_area_body_entered)
   drop_button.pressed.connect(_on_drop_button_pressed)
+
+  start_new_turn()
 
 
 func start_new_turn() -> void:
   turn_label.text = "Player %s's Turn" % turn
   drop_button.show()
   drop_button.disabled = false
-  spawn_random_animal()
+  spawn_shape()
 
 
-func spawn_random_animal() -> void:
-  var keys = animals.keys()
+func spawn_shape() -> void:
+  var keys = shapes.keys()
   var random_key = keys[randi() % keys.size()]
 
-  current_animal = animals[random_key].duplicate()
-  current_animal.visible = true
-  current_animal.position = drop_from.position
+  current_shape = shapes[random_key].duplicate()
+  current_shape.visible = true
+  current_shape.position = drop_from.position
 
-  var body: RigidBody2D = current_animal.get_node("Body")
-  body.freeze = true
-  add_child(current_animal)
+  current_shape.freeze = true
+  add_child(current_shape)
 
 
 func _on_drop_button_pressed() -> void:
-  if not current_animal:
+  if not current_shape:
     return
 
   is_dragging = false
   drop_button.hide()
 
-  var body: RigidBody2D = current_animal.get_node("Body")
-  body.freeze = false
-  body.sleeping_state_changed.connect(_on_animal_settled)
+  current_shape.freeze = false
+  current_shape.sleeping_state_changed.connect(_on_animal_settled)
 
 
 func _on_animal_settled() -> void:
-  var body: RigidBody2D = current_animal.get_node("Body")
 
-  if body.is_sleeping():
-    body.sleeping_state_changed.disconnect(_on_animal_settled)
+  if current_shape.is_sleeping():
+    current_shape.sleeping_state_changed.disconnect(_on_animal_settled)
 
     await get_tree().create_timer(0.5).timeout
 
@@ -103,7 +95,7 @@ func _on_discard_area_body_entered(body: Node2D) -> void:
   if game_over:
     return
 
-  if body.is_in_group("animal"):
+  if body.is_in_group("shape"):
     game_over = true
     var winner = 3 - turn
     print("Animal fell! Player %s loses. Player %s wins!" % [turn, winner])

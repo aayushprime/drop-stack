@@ -10,8 +10,9 @@ config_version=5
 
 [application]
 
-config/name="Animal Fall"
-run/main_scene="uid://dnk6p04jsocgs"
+config/name="Drop Stack"
+config/description="Drop Stack"
+run/main_scene="uid://b04wfg3f3sm5p"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 run/low_processor_mode=true
 boot_splash/bg_color=Color(0.27451, 0.258824, 0.368627, 1)
@@ -19,6 +20,11 @@ boot_splash/show_image=false
 config/icon="uid://j4jsqgnqx4ru"
 config/macos_native_icon="uid://j4jsqgnqx4ru"
 config/windows_native_icon="uid://j4jsqgnqx4ru"
+
+[autoload]
+
+Levels="*res://autoload/Levels.gd"
+LocalStorage="*res://autoload/LocalStorage.gd"
 
 [display]
 
@@ -40,5 +46,6 @@ pointing/emulate_touch_from_mouse=true
 
 [rendering]
 
+textures/canvas_textures/default_texture_repeat=1
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"

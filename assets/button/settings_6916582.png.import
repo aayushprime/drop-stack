@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dbgfa641yegi0"
-path="res://.godot/imported/giraffe.png-11f9bce7f4547d795f5f68d74042fec2.ctex"
+uid="uid://5swlliuwds82"
+path="res://.godot/imported/settings_6916582.png-eb29bfdd5c974e3f5732dc3bceba27ff.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/animals/giraffe.png"
-dest_files=["res://.godot/imported/giraffe.png-11f9bce7f4547d795f5f68d74042fec2.ctex"]
+source_file="res://assets/button/settings_6916582.png"
+dest_files=["res://.godot/imported/settings_6916582.png-eb29bfdd5c974e3f5732dc3bceba27ff.ctex"]
 
 [params]
 

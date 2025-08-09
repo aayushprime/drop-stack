@@ -1,0 +1,52 @@
+[
+	{
+		"id": 1,
+		"target": 2.0,
+		"template": "shapes"
+	},
+	{
+		"id": 2,
+		"target": 2.25,
+		"template": "shapes"
+	},
+	{
+		"id": 3,
+		"target": 2.5,
+		"template": "shapes"
+	},
+	{
+		"id": 4,
+		"target": 2.75,
+		"template": "animals"
+	},
+	{
+		"id": 5,
+		"target": 3.0,
+		"template": "animals"
+	},
+	{
+		"id": 6,
+		"target": 3.25,
+		"template": "animals"
+	},
+	{
+		"id": 7,
+		"target": 3.5,
+		"template": "animals"
+	},
+	{
+		"id": 8,
+		"target": 3.75,
+		"template": "shapes"
+	},
+	{
+		"id": 9,
+		"target": 4.0,
+		"template": "shapes"
+	},
+	{
+		"id": 10,
+		"target": 4.25,
+		"template": "shapes"
+	}
+]
