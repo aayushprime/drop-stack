@@ -7,8 +7,8 @@ extends Control
 
 
 func _ready():
+  get_tree().current_scene = self
   $Back.pressed.connect(func():
-    queue_free()
     get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
   )
 
