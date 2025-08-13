@@ -31,6 +31,7 @@ LocalStorage="*res://autoload/LocalStorage.gd"
 window/size/viewport_width=720
 window/size/viewport_height=1280
 window/stretch/mode="canvas_items"
+window/handheld/orientation=1
 
 [gui]
 
@@ -38,6 +39,7 @@ theme/custom="uid://b3klx57slj0l3"
 
 [input_devices]
 
+pointing/android/enable_pan_and_scale_gestures=true
 pointing/emulate_touch_from_mouse=true
 
 [physics]

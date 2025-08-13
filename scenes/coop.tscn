@@ -152,3 +152,12 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 50
 text = "Drop"
+
+[node name="Back" type="Button" parent="."]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 18.0
+offset_right = 93.0
+offset_bottom = 60.0
+theme_override_font_sizes/font_size = 30
+text = "back"

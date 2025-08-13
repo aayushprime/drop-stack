@@ -2,27 +2,27 @@
 	{
 		"id": 1,
 		"target": 2.0,
-		"template": "shapes"
+		"template": "funky"
 	},
 	{
 		"id": 2,
 		"target": 2.25,
-		"template": "shapes"
+		"template": "animals"
 	},
 	{
 		"id": 3,
 		"target": 2.5,
-		"template": "shapes"
+		"template": "funky"
 	},
 	{
 		"id": 4,
 		"target": 2.75,
-		"template": "animals"
+		"template": "bubbly"
 	},
 	{
 		"id": 5,
 		"target": 3.0,
-		"template": "animals"
+		"template": "shapes"
 	},
 	{
 		"id": 6,
@@ -32,12 +32,12 @@
 	{
 		"id": 7,
 		"target": 3.5,
-		"template": "animals"
+		"template": "funky"
 	},
 	{
 		"id": 8,
 		"target": 3.75,
-		"template": "shapes"
+		"template": "bubbly"
 	},
 	{
 		"id": 9,
@@ -47,6 +47,206 @@
 	{
 		"id": 10,
 		"target": 4.25,
+		"template": "animals"
+	},
+	{
+		"id": 11,
+		"target": 2.0,
+		"template": "funky"
+	},
+	{
+		"id": 12,
+		"target": 2.25,
+		"template": "bubbly"
+	},
+	{
+		"id": 13,
+		"target": 2.5,
 		"template": "shapes"
+	},
+	{
+		"id": 14,
+		"target": 2.75,
+		"template": "animals"
+	},
+	{
+		"id": 15,
+		"target": 3.0,
+		"template": "funky"
+	},
+	{
+		"id": 16,
+		"target": 3.25,
+		"template": "bubbly"
+	},
+	{
+		"id": 17,
+		"target": 3.5,
+		"template": "shapes"
+	},
+	{
+		"id": 18,
+		"target": 3.75,
+		"template": "animals"
+	},
+	{
+		"id": 19,
+		"target": 4.0,
+		"template": "funky"
+	},
+	{
+		"id": 20,
+		"target": 4.25,
+		"template": "bubbly"
+	},
+	{
+		"id": 21,
+		"target": 2.0,
+		"template": "shapes"
+	},
+	{
+		"id": 22,
+		"target": 2.25,
+		"template": "animals"
+	},
+	{
+		"id": 23,
+		"target": 2.5,
+		"template": "funky"
+	},
+	{
+		"id": 24,
+		"target": 2.75,
+		"template": "bubbly"
+	},
+	{
+		"id": 25,
+		"target": 3.0,
+		"template": "shapes"
+	},
+	{
+		"id": 26,
+		"target": 3.25,
+		"template": "animals"
+	},
+	{
+		"id": 27,
+		"target": 3.5,
+		"template": "funky"
+	},
+	{
+		"id": 28,
+		"target": 3.75,
+		"template": "bubbly"
+	},
+	{
+		"id": 29,
+		"target": 4.0,
+		"template": "shapes"
+	},
+	{
+		"id": 30,
+		"target": 4.25,
+		"template": "animals"
+	},
+	{
+		"id": 31,
+		"target": 2.0,
+		"template": "funky"
+	},
+	{
+		"id": 32,
+		"target": 2.25,
+		"template": "bubbly"
+	},
+	{
+		"id": 33,
+		"target": 2.5,
+		"template": "shapes"
+	},
+	{
+		"id": 34,
+		"target": 2.75,
+		"template": "animals"
+	},
+	{
+		"id": 35,
+		"target": 3.0,
+		"template": "funky"
+	},
+	{
+		"id": 36,
+		"target": 3.25,
+		"template": "bubbly"
+	},
+	{
+		"id": 37,
+		"target": 3.5,
+		"template": "shapes"
+	},
+	{
+		"id": 38,
+		"target": 3.75,
+		"template": "animals"
+	},
+	{
+		"id": 39,
+		"target": 4.0,
+		"template": "funky"
+	},
+	{
+		"id": 40,
+		"target": 4.25,
+		"template": "bubbly"
+	},
+	{
+		"id": 41,
+		"target": 2.0,
+		"template": "shapes"
+	},
+	{
+		"id": 42,
+		"target": 2.25,
+		"template": "animals"
+	},
+	{
+		"id": 43,
+		"target": 2.5,
+		"template": "funky"
+	},
+	{
+		"id": 44,
+		"target": 2.75,
+		"template": "bubbly"
+	},
+	{
+		"id": 45,
+		"target": 3.0,
+		"template": "shapes"
+	},
+	{
+		"id": 46,
+		"target": 3.25,
+		"template": "animals"
+	},
+	{
+		"id": 47,
+		"target": 3.5,
+		"template": "funky"
+	},
+	{
+		"id": 48,
+		"target": 3.75,
+		"template": "bubbly"
+	},
+	{
+		"id": 49,
+		"target": 4.0,
+		"template": "shapes"
+	},
+	{
+		"id": 50,
+		"target": 4.25,
+		"template": "animals"
 	}
 ]

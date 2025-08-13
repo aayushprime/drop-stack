@@ -34,6 +34,11 @@ func _on_input_catcher_dragged(event: InputEventMouseMotion):
 
 
 func _ready() -> void:
+  get_tree().current_scene = self
+  $Back.pressed.connect(func():
+      var pause_scene = preload("res://scenes/coop_pause.tscn").instantiate()
+      add_child(pause_scene)
+  )
   $Game/InputCatcher.tapped.connect(_on_input_catcher_tapped)
   $Game/InputCatcher.dragged.connect(_on_input_catcher_dragged)
 

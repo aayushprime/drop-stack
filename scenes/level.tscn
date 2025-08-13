@@ -18,6 +18,7 @@ offset_bottom = -1060.0
 grow_horizontal = 2
 grow_vertical = 2
 rotation = 0.000183595
+mouse_filter = 1
 script = ExtResource("1_mx8sn")
 
 [node name="Button" type="TextureButton" parent="."]

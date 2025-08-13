@@ -7,6 +7,7 @@ var disabled: bool :
     $Button/Lock.visible = _disabled
     $"Button/LevelLabel".visible = !_disabled
     $Button.disabled = _disabled
+    $Button/Stars.visible = !_disabled
   get:
     return _disabled
 

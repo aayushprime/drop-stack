@@ -14,6 +14,7 @@ corner_radius_top_right = 10
 
 [node name="Control" type="Panel"]
 self_modulate = Color(0.0142752, 0.0142752, 0.0142752, 0.45098)
+z_index = 100
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0

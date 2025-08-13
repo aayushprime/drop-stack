@@ -40,3 +40,6 @@ func _ready() -> void:
   $Menu/Quit.pressed.connect(func():
     get_tree().quit()
   )
+  if OS.has_feature("web"):
+      $Menu/Quit.visible = false
+  

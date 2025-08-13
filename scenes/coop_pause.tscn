@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://tf4u5gk114t"]
+[gd_scene load_steps=3 format=3 uid="uid://ct8ujvridel4g"]
 
-[ext_resource type="Script" uid="uid://210jiu7cqh6s" path="res://scenes/level_failed.gd" id="1_tva4u"]
+[ext_resource type="Script" uid="uid://btqn72qqh43es" path="res://scenes/coop_pause.gd" id="1_b2spp"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6i64f"]
 bg_color = Color(0.27451, 0.258824, 0.368627, 1)
@@ -19,10 +19,12 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -2.0
+offset_top = -1.0
 offset_right = -2.0
+offset_bottom = -1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_tva4u")
+script = ExtResource("1_b2spp")
 
 [node name="Panel" type="Panel" parent="."]
 custom_minimum_size = Vector2(640, 800)
@@ -41,29 +43,16 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -194.0
-offset_top = 94.0
-offset_right = 195.0
-offset_bottom = 244.0
+offset_left = -194.5
+offset_top = 110.0
+offset_right = 194.5
+offset_bottom = 260.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 120
-text = "Level X"
-
-[node name="Objective" type="Label" parent="Panel"]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -268.0
-offset_top = 272.0
-offset_right = 268.0
-offset_bottom = 329.0
-grow_horizontal = 2
-theme_override_font_sizes/font_size = 45
-text = "Reach 45m to get 3 stars"
+text = "Quit?"
 horizontal_alignment = 1
 
-[node name="Retry" type="Button" parent="Panel"]
+[node name="Continue" type="Button" parent="Panel"]
 custom_minimum_size = Vector2(400, 130)
 layout_mode = 1
 anchors_preset = 7
@@ -72,16 +61,15 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -200.0
-offset_top = -362.0
+offset_top = -372.0
 offset_right = 200.0
-offset_bottom = -232.0
+offset_bottom = -242.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 50
-text = "Retry
-"
+text = "Continue"
 
-[node name="Back" type="Button" parent="Panel"]
+[node name="Quit" type="Button" parent="Panel"]
 custom_minimum_size = Vector2(400, 130)
 layout_mode = 1
 anchors_preset = 7
@@ -90,26 +78,10 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -200.0
-offset_top = -197.0
+offset_top = -211.0
 offset_right = 200.0
-offset_bottom = -67.0
+offset_bottom = -81.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 50
-text = "Back
-"
-
-[node name="Objective2" type="Label" parent="Panel"]
-modulate = Color(1, 0.38, 0.38, 1)
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -269.0
-offset_top = 353.0
-offset_right = 267.0
-offset_bottom = 410.0
-grow_horizontal = 2
-theme_override_font_sizes/font_size = 45
-text = "Failed"
-horizontal_alignment = 1
+text = "Quit"

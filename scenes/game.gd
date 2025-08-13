@@ -80,6 +80,7 @@ func _ready() -> void:
         pause_scene.target = target
         add_child(pause_scene)
     )
+    $TopBar/Label.text = "Level " + str(level)
 
     start_new_turn()
 

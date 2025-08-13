@@ -86,6 +86,7 @@ anchor_bottom = 1.0
 offset_top = 305.0
 grow_horizontal = 2
 grow_vertical = 2
+scroll_deadzone = 5
 
 [node name="LevelsContainer" type="VBoxContainer" parent="ScrollContainer"]
 layout_mode = 2

@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bk5afsftiacxv" path="res://scenes/winner.gd" id="1_xirn5"]
 
 [node name="Winner" type="Control"]
+z_index = 100
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

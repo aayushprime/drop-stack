@@ -1,0 +1,173 @@
+[gd_scene load_steps=13 format=3 uid="uid://dtd2lodw8xlii"]
+
+[ext_resource type="Texture2D" uid="uid://bv73ivb41lcap" path="res://assets/funky/1.png" id="1_cdw80"]
+[ext_resource type="Texture2D" uid="uid://w8xa2td6f7hy" path="res://assets/funky/2.png" id="2_0eqbv"]
+[ext_resource type="Texture2D" uid="uid://btfwxpnjqnq14" path="res://assets/funky/3.png" id="3_wt5de"]
+[ext_resource type="Texture2D" uid="uid://cjsddoi44ho30" path="res://assets/funky/4.png" id="4_o7uyh"]
+[ext_resource type="Texture2D" uid="uid://bwprfxrrfqyut" path="res://assets/funky/5.png" id="5_8an5g"]
+[ext_resource type="Texture2D" uid="uid://c8prq8ftcw5jc" path="res://assets/funky/6.png" id="6_s136l"]
+[ext_resource type="Texture2D" uid="uid://ru8qq04c54fy" path="res://assets/funky/7.png" id="7_rpbrw"]
+[ext_resource type="Texture2D" uid="uid://rhcpcvnei6xm" path="res://assets/funky/8.png" id="8_bxmlo"]
+[ext_resource type="Texture2D" uid="uid://bnve8xsn1tmmw" path="res://assets/funky/9.png" id="9_8ggvb"]
+[ext_resource type="Texture2D" uid="uid://wqs7am7lus7b" path="res://assets/funky/10.png" id="10_8e730"]
+[ext_resource type="Texture2D" uid="uid://d0f80122trwyf" path="res://assets/funky/11.png" id="11_rhq7x"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0eqbv"]
+rough = true
+bounce = 0.05
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Body" type="RigidBody2D" parent="." groups=["shape"]]
+visible = false
+mass = 0.2
+physics_material_override = SubResource("PhysicsMaterial_0eqbv")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Body"]
+scale = Vector2(1.4, 1.4)
+polygon = PackedVector2Array(32.5, -53.75, -16.25, -53.75, -50, -12.5, -11.25, -11.25, -50, 53.75, 51.25, -28.75, 5, -28.75)
+
+[node name="Sprite2D" type="Sprite2D" parent="Body"]
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("1_cdw80")
+
+[node name="Body2" type="RigidBody2D" parent="." groups=["shape"]]
+visible = false
+mass = 0.2
+physics_material_override = SubResource("PhysicsMaterial_0eqbv")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Body2"]
+scale = Vector2(1.4, 1.4)
+polygon = PackedVector2Array(15, -41.25, 32.5, -30, 41.25, -10, 40, 11.25, 31.25, 27.5, 12.5, 40, -7.5, 41.25, -25, 35, -36.25, 25, -42.5, 15, -33.75, 16.25, -25, 17.5, -10, 16.25, 2.5, 12.5, 11.25, 0, 20, -16.25, 17.5, -30)
+
+[node name="Sprite2D" type="Sprite2D" parent="Body2"]
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("2_0eqbv")
+
+[node name="Body3" type="RigidBody2D" parent="." groups=["shape"]]
+visible = false
+mass = 0.2
+physics_material_override = SubResource("PhysicsMaterial_0eqbv")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Body3"]
+scale = Vector2(1.41079, 1.41079)
+polygon = PackedVector2Array(-100, 8.75, -63.75, -31.25, -15, 6.25, 35, -38.75, 101.25, -2.5, 80, 23.75, 36.25, -11.25, -13.75, 40, -62.5, 2.5, -87.5, 40)
+
+[node name="Sprite2D" type="Sprite2D" parent="Body3"]
+position = Vector2(-2.02656e-06, -4.76837e-07)
+scale = Vector2(1.07064, 1.07064)
+texture = ExtResource("3_wt5de")
+
+[node name="Body4" type="RigidBody2D" parent="." groups=["shape"]]
+visible = false
+mass = 0.2
+physics_material_override = SubResource("PhysicsMaterial_0eqbv")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Body4"]
+scale = Vector2(1.79398, 1.79398)
+polygon = PackedVector2Array(-51.25, -52.5, -28.75, -6.25, -65, 1.25, -28.75, 11.25, -35, 55, -1.25, 22.5, 13.75, 33.75, 16.25, 15, 66.25, 22.5, 23.75, -5, 50, -15, 3.75, -16.25, 3.75, -33.75, -7.5, -16.25)
+
+[node name="Sprite2D" type="Sprite2D" parent="Body4"]
+position = Vector2(-2.02656e-06, -4.76837e-07)
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("4_o7uyh")
+
+[node name="Body5" type="RigidBody2D" parent="." groups=["shape"]]
+visible = false
+mass = 0.2
+physics_material_override = SubResource("PhysicsMaterial_0eqbv")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Body5"]
+scale = Vector2(1.84625, 1.84625)
+polygon = PackedVector2Array(-7.5, -35, -38.75, -2.5, -13.75, -7.5, 2.5, 36.25, 28.75, 30, 12.5, -8.75, 40, -13.75)
+
+[node name="Sprite2D" type="Sprite2D" parent="Body5"]
+position = Vector2(-2.02656e-06, -4.76837e-07)
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("5_8an5g")
+
+[node name="Body6" type="RigidBody2D" parent="." groups=["shape"]]
+visible = false
+mass = 0.2
+physics_material_override = SubResource("PhysicsMaterial_0eqbv")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Body6"]
+scale = Vector2(1.83043, 1.83043)
+polygon = PackedVector2Array(-13.75, -51.25, -18.75, -21.25, -12.5, -23.75, -12.5, -16.25, -51.25, -2.5, -8.75, 18.75, -12.5, 27.5, -18.75, 23.75, -30, 50, -6.25, 32.5, -8.75, 30, -6.25, 18.75, 6.25, 20, 10, 17.5, 20, 23.75, 11.25, 27.5, 46.25, 41.25, 26.25, 16.25, 22.5, 21.25, 13.75, 16.25, 20, 11.25, 23.75, 2.5, 20, -5, 31.25, -12.5, 35, -5, 51.25, -23.75, 25, -20, 28.75, -13.75, 18.75, -7.5, 12.5, -13.75, 3.75, -17.5, -7.5, -16.25, -8.75, -25, -2.5, -25)
+
+[node name="Sprite2D" type="Sprite2D" parent="Body6"]
+position = Vector2(-2.02656e-06, -4.76837e-07)
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("6_s136l")
+
+[node name="Body7" type="RigidBody2D" parent="." groups=["shape"]]
+visible = false
+mass = 0.2
+physics_material_override = SubResource("PhysicsMaterial_0eqbv")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Body7"]
+scale = Vector2(1.88536, 1.88536)
+polygon = PackedVector2Array(-30, -11.25, -11.25, -28.75, 1.25, -15, 16.25, -36.25, 30, -12.5, 16.25, 0, 31.25, 15, 16.25, 31.25, 1.25, 16.25, -15, 37.5, -26.25, 13.75, -13.75, 2.5)
+
+[node name="Sprite2D" type="Sprite2D" parent="Body7"]
+position = Vector2(-2.02656e-06, -4.76837e-07)
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("7_rpbrw")
+
+[node name="Body8" type="RigidBody2D" parent="." groups=["shape"]]
+visible = false
+mass = 0.2
+physics_material_override = SubResource("PhysicsMaterial_0eqbv")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Body8"]
+scale = Vector2(2.53101, 2.53101)
+polygon = PackedVector2Array(-27.5, -41.25, -46.25, 11.25, -5, 42.5, 32.5, 21.25, 46.25, -22.5, -16.25, -22.5, -18.75, -27.5, 11.25, -28.75, -27.5, -42.5)
+
+[node name="Sprite2D" type="Sprite2D" parent="Body8"]
+position = Vector2(-2.02656e-06, -4.76837e-07)
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("8_bxmlo")
+
+[node name="Body9" type="RigidBody2D" parent="." groups=["shape"]]
+visible = false
+mass = 0.2
+physics_material_override = SubResource("PhysicsMaterial_0eqbv")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Body9"]
+scale = Vector2(2.51313, 2.51313)
+polygon = PackedVector2Array(-23.75, -16.25, -7.5, -16.25, -6.25, -26.25, 6.25, -26.25, 6.25, -17.5, 23.75, -18.75, 21.25, -3.75, 7.5, -3.75, 10, 25, -10, 23.75, -7.5, -2.5, -20, -1.25)
+
+[node name="Sprite2D" type="Sprite2D" parent="Body9"]
+position = Vector2(-2.02656e-06, -4.76837e-07)
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("9_8ggvb")
+
+[node name="Body10" type="RigidBody2D" parent="." groups=["shape"]]
+visible = false
+mass = 0.2
+physics_material_override = SubResource("PhysicsMaterial_0eqbv")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Body10"]
+scale = Vector2(2.47102, 2.47102)
+polygon = PackedVector2Array(-10, -48.75, -31.25, -10, -25, -2.5, -33.75, 11.25, -18.75, 11.25, -18.75, 25, -7.5, 15, -6.25, 50, 17.5, 13.75, 31.25, 11.25, 21.25, 2.5, 35, -11.25, 11.25, -11.25, 11.25, -25, -6.25, -15)
+
+[node name="Sprite2D" type="Sprite2D" parent="Body10"]
+position = Vector2(-2.02656e-06, -4.76837e-07)
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("10_8e730")
+
+[node name="Body11" type="RigidBody2D" parent="." groups=["shape"]]
+visible = false
+mass = 0.2
+physics_material_override = SubResource("PhysicsMaterial_0eqbv")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Body11"]
+scale = Vector2(2.48446, 2.48446)
+polygon = PackedVector2Array(-38.75, -25, -23.75, -31.25, -10, -16.25, -10, -38.75, 5, -38.75, 3.75, -16.25, 20, -32.5, 28.75, -22.5, 13.75, -6.25, 43.75, -7.5, 33.75, 7.5, 12.5, 6.25, 28.75, 21.25, 18.75, 32.5, 3.75, 16.25, 5, 37.5, -8.75, 37.5, -10, 17.5, -26.25, 38.75, -30, 36.25, -33.75, 20, -18.75, 6.25, -41.25, 6.25, -41.25, -7.5, -20, -7.5, -38.75, -22.5)
+
+[node name="Sprite2D" type="Sprite2D" parent="Body11"]
+position = Vector2(-2.02656e-06, -4.76837e-07)
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("11_rhq7x")

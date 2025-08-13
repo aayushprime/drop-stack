@@ -6,7 +6,9 @@ static var id_to_level: Dictionary = {}
 
 var key_to_template = {
   "animals": preload("res://scenes/animals.tscn"),
-  "shapes": preload("res://scenes/geometric.tscn")
+  "shapes": preload("res://scenes/geometric.tscn"),
+  "funky": preload("res://scenes/funky.tscn"),
+  "bubbly": preload("res://scenes/bubbly.tscn"),
 }
 
 static func _init():
