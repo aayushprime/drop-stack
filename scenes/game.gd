@@ -60,6 +60,7 @@ func _ready() -> void:
         is_dragging = false
         current_shape.freeze = false
         current_shape.sleeping_state_changed.connect(_on_physics_settle)
+        $UI/Container/Drop.disabled = true
     )
     $UI/Container/Rotate.pressed.connect(func():
         if not current_shape or game_over:
@@ -88,6 +89,7 @@ func _ready() -> void:
 func start_new_turn() -> void:
     objects_used += 1
     spawn_shape()
+    $UI/Container/Drop.disabled = false
 
 
 func spawn_shape() -> void:
